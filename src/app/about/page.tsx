@@ -1,11 +1,17 @@
 "use client";
 import Image from "next/image";
-import TabNavBar from "../../components/TabNavBar";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
+
+  const goToHomePage = () => {
+    router.push("/");
+  };
+  const goToContactPage = () => {
+    router.push("/Contact");
+  };
 
   const goToAboutPage = () => {
     router.push("/about");
@@ -36,10 +42,10 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-row basis-8/12 h-full justify-center items-center space-x-32">
-            <p className="text-rich_black font-serif font-bold text-center text-2xl">
+            <p className="text-rich_black font-serif text-center text-2xl">
               Books
             </p>
-            <p className="text-rich_black font-serif font-bold text-center text-2xl">
+            <p className="text-rich_black font-serif text-center text-2xl">
               Reviews
             </p>
             <button onClick={goToAboutPage}>
@@ -49,38 +55,40 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-row basis-2/12 h-full justify-center items-center">
-            <img
-              className="text-rich_black h-8"
-              src="images/icons8-contact-48.png"
-              alt="dont work"
-            />
-            <p className="text-rich_black font-serif font-bold text-center text-2xl">
-              Contact
-            </p>
+            <button
+              className="w-full flex flex-row justify-center items-center"
+              onClick={goToContactPage}
+            >
+              <img
+                className="text-rich_black h-8"
+                src="images/icons8-contact-48.png"
+                alt="dont work"
+              />
+              <p className="text-rich_black font-serif font-bold text-center text-2xl">
+                Contact
+              </p>
+            </button>
           </div>
         </div>
 
         <div className="flex flex-row justify-items-center justify-center h-full">
           <div className="basis-5/6 bg-isabelline-700 rounded-t-3xl p-9 h-full">
             <p className="text-rich_black text-7xl font-serif mb-14">
-              Welcome To Bookit Service For all Your Book Club Needs
+              Welcome To Bookit My Personal Tool For Me To Share Book Review's
+              and Recomendation's
             </p>
-            <div className="w-3/6">
+            <div className="w-3/6 ">
               <p className="text-rich_black font-semibold font-serif mb-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                asperiores dolorem non quibusdam eligendi exercitationem, quo
-                laboriosam dicta aliquid architecto doloremque harum deleniti!
-                Magnam vitae hic repellendus eveniet eius totam. Lorem ipsum
-                dolor sit, amet consectetur adipisicing elit. Sequi, obcaecati
-                sapiente tempora impedit in ratione quam itaque voluptatum eaque
-                quis error, quos tempore aliquid eveniet iusto ipsum possimus
-                doloremque officia.
+                Ive Been Trying to level up my front end designgs as its
+                seemingly lacking and so in this and likely for the next few
+                projects ive devide to maintain a focus on user ability, design
+                and over all asthetic
               </p>
-            </div>
-            <div className="flex flex-row items-center space-x-2">
-              <img className="w-8 h-8" src="images/icons8-add-50.png" alt="" />
-              <p className="text-rich_black text-xl font-serif">
-                looking to join or start a club?
+              <p className="text-rich_black font-semibold font-serif mb-8">
+                I personaly enjoy backEnd More Than FrontEnd but because of that
+                I've decided to take the time to make sure that i have
+                appropirate skills to develop front endds that can satisfy any
+                user to some degree
               </p>
             </div>
           </div>
