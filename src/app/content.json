@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "BOOKS",
+    "description": "I have a poor memory so here I am creating a site to remember what books I've read and what I thought"
+  },
+  "contentSections": [
+    {
+      "type": "text",
+      "text": "If you'd like to contact me, you can do so here:"
+    },
+    {
+      "type": "text",
+      "text": "I personally enjoy back-end more than front-end, but because of that I've decided to take the time to make sure that I have appropriate skills to develop front-ends that can satisfy any user to some degree."
+    }
+  ],
+  "footer": {
+    "contactText": "Feel free to reach out if you want to talk about books, programming, or anything else!"
+  }
+}

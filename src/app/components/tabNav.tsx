@@ -26,7 +26,7 @@ const TabNav = ({ currentView }: NavProps) => {
   };
 
   return (
-    <div className="flex flex-row bg-isabelline h-full items-center justify-between min-w-full px-8">
+    <div className="flex flex-row p-2 bg-isabelline h-full items-center justify-between min-w-full px-8">
       <button
         onClick={goToHomePage}
         className="flex flex-row basis-2/12 justify-center"

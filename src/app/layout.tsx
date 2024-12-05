@@ -25,6 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head></head>
       <link rel="icon" href="images/icons8-book-30.png" type="image/png" />
       <title>Bookit</title>
       <body
