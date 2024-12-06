@@ -12,8 +12,8 @@ export default function Home() {
           <p className={`text-rich_black font-serif text-7xl mb-14`}>
             Welcome To Bookit Service For all Your Book Club Needs
           </p>
-          <div className="w-3/6">
-            <p className="text-rich_black font-semibold font-serif mb-8">
+          <div className="flex flex-row">
+            <p className="basis-3/4 text-rich_black font-semibold font-serif mb-8">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               asperiores dolorem non quibusdam eligendi exercitationem, quo
               laboriosam dicta aliquid architecto doloremque harum deleniti!
@@ -23,14 +23,22 @@ export default function Home() {
               error, quos tempore aliquid eveniet iusto ipsum possimus
               doloremque officia.
             </p>
+            <div></div>
           </div>
-          <div className="flex flex-row items-center space-x-2">
-            <img className="w-8 h-8" src="images/icons8-add-50.png" alt="" />
-            <p className="text-rich_black text-xl font-serif">
-              looking to join or start a club?
-            </p>
+          <div className=" flex flex-col px-3 space-y-1">
+            <button className="flex flex-row items-center space-x-2">
+              <img className="w-8 h-8" src="images/icons8-add-50.png" alt="" />
+              <p className="text-rich_black text-xl font-serif">
+                looking add a Book?
+              </p>
+            </button>
+            <button className="flex flex-row items-center space-x-2">
+              <img className="w-8 h-8" src="images/icons8-add-50.png" alt="" />
+              <p className="text-rich_black text-xl font-serif">
+                looking add a Review?
+              </p>
+            </button>
           </div>
-          <button className="bg-silver-600 px-4 text-rich_black">BTN</button>
         </div>
       </div>
     </div>
