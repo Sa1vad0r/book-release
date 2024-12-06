@@ -1,7 +1,14 @@
 "use client";
+import { useState } from "react";
 import TabNav from "../components/tabNav";
+import UserReviewSubmit from "../components/UserReviewSubmit";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="flex flex-col bg-isabelline min-h-screen ">
       <div className="basis-1/12 bg-isabelline h-full">
@@ -24,6 +31,14 @@ export default function Home() {
             <p className="text-rich_black font-semibold font-serif mb-8">
               I Created this site as a platform for d
             </p>
+
+            <button
+              onClick={openModal}
+              className="px-6 py-2 bg-rich_black-700 text-isabelline-900 rounded-lg hover:bg-blue-600 mb-4"
+            >
+              Add a Review
+            </button>
+            <UserReviewSubmit isOpen={isModalOpen} closeModal={closeModal} />
           </div>
         </div>
       </div>
