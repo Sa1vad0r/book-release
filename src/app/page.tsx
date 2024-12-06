@@ -1,11 +1,9 @@
-"use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TabNav from "./components/tabNav";
-import TopTabNav from "./components/TopTabNav";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-isabelline h-screen ">
+    <div className="flex flex-col bg-isabelline min-h-screen ">
       <div className="basis-1/12 bg-isabelline w-screen">
         <TabNav />
       </div>
@@ -33,6 +31,7 @@ export default function Home() {
               looking to join or start a club?
             </p>
           </div>
+          <button className="bg-silver-600 px-4 text-rich_black">BTN</button>
         </div>
       </div>
     </div>

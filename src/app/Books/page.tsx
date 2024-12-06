@@ -1,7 +1,6 @@
 "use client";
 import TabNav from "../components/tabNav";
-import content from "../content.json"; // Import the JSON data
-import books from "../books.json"; // Import the books JSON data
+import GetBooks from "../components/GetBooks";
 import NewBookSubmit from "../components/NewBookSubmit";
 
 export default function Home() {
@@ -29,30 +28,8 @@ export default function Home() {
               to some degree.
             </p>
           </div>
-
           <NewBookSubmit></NewBookSubmit>
-
-          {/* Dynamically render books from JSON */}
-          {books.map((book, index) => (
-            <button
-              className="w-full"
-              onClick={() => {
-                console.log(book.title);
-              }}
-            >
-              <div
-                key={index}
-                className="mb-5 bg-isabelline-400 p-5 rounded-lg justify-items-start"
-              >
-                <p className="text-rich_black text-3xl font-serif font-semibold mb-4">
-                  {book.title}
-                </p>
-                <p className="text-rich_black text-left text-xl font-serif mb-4">
-                  {book.description}
-                </p>
-              </div>
-            </button>
-          ))}
+          <GetBooks></GetBooks>
         </div>
       </div>
     </div>
