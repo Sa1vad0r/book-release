@@ -19,20 +19,24 @@ export default function Home() {
 
       <div className="flex flex-row justify-items-center justify-center h-full">
         <div className="basis-5/6 bg-isabelline-900 shadow rounded-t-3xl p-9 h-full">
-          <p className="text-rich_black text-5xl font-serif mb-14">BOOKS</p>
-          <p className="text-rich_black text-5xl font-serif mb-14">
+          <p className="text-rich_black font-bold text-5xl font-serif mb-4">
+            BOOKS
+          </p>
+          <p className="w-4/5 text-rich_black text-5xl font-serif mb-4">
             I have a poor memory so here I am creating a site to remember what
             books I've read and what I thought
           </p>
           <div className="w-3/6">
-            <p className="text-rich_black font-semibold font-serif mb-8">
-              If you'd like to contact me, you can do so here:
+            <p className="text-rich_black font-semibold font-serif mb-4">
+              This is curreenlty a library made by me for me but if youd like to
+              see the types of books ive read n recomend you con go through and
+              see so here
             </p>
-            <p className="text-rich_black font-semibold font-serif mb-8">
-              I personally enjoy back-end more than front-end, but because of
-              that I've decided to take the time to make sure that I have
-              appropriate skills to develop front-ends that can satisfy any user
-              to some degree.
+            <p className="text-rich_black font-serif">
+              If you'd like to add a book to the selection &
+            </p>
+            <p className="text-rich_black font-serif mb-4">
+              are authorized, you can do so here:
             </p>
           </div>
           <button
