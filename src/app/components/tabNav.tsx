@@ -26,10 +26,10 @@ const TabNav = ({ currentView }: NavProps) => {
   };
 
   return (
-    <div className="flex flex-row p-2 bg-isabelline h-full items-center justify-between min-w-full px-8">
+    <div className="flex flex-col p-5 sm:flex-row bg-isabelline h-full items-center justify-between w-full px-4 sm:px-8">
       <button
         onClick={goToHomePage}
-        className="flex flex-row basis-2/12 justify-center"
+        className="flex flex-row justify-center sm:basis-2/12 mb-4 sm:mb-0"
       >
         <img
           className="text-rich_black h-8 w-8"
@@ -37,21 +37,19 @@ const TabNav = ({ currentView }: NavProps) => {
           alt="Bookit Logo"
         />
         <p
-          className={`text-rich_black font-serif font-bold text-center text-2xl ${
+          className={`text-rich_black font-serif font-bold text-center text-xl sm:text-2xl ${
             currentView === "home" ? "text-blue-500" : ""
           }`}
         >
           Bookit
         </p>
       </button>
-
-      {/* Center Section - Tabs */}
-      <div className="flex flex-row basis-8/12 justify-center items-center gap-x-24">
+      <div className="flex flex-row sm:basis-8/12 justify-center items-center gap-x-8 sm:gap-x-12 mb-4 sm:mb-0">
         <button
           onClick={goToBooksPage}
           className={`${
             currentView === "books" ? "font-bold" : ""
-          } font-serif text-center text-2xl text-rich_black`}
+          } font-serif text-center text-lg sm:text-2xl text-rich_black`}
         >
           Books
         </button>
@@ -59,7 +57,7 @@ const TabNav = ({ currentView }: NavProps) => {
           onClick={goToReviewsPage}
           className={`${
             currentView === "reviews" ? "font-bold" : ""
-          } font-serif text-center text-2xl text-rich_black`}
+          } font-serif text-center text-lg sm:text-2xl text-rich_black`}
         >
           Reviews
         </button>
@@ -67,15 +65,14 @@ const TabNav = ({ currentView }: NavProps) => {
           onClick={goToAboutPage}
           className={`${
             currentView === "about" ? "font-bold" : ""
-          } font-serif text-center text-2xl text-rich_black`}
+          } font-serif text-center text-lg sm:text-2xl text-rich_black`}
         >
           About
         </button>
       </div>
-
       <button
         onClick={goToContactPage}
-        className="flex flex-row basis-2/12 justify-center"
+        className="flex flex-row justify-center sm:basis-2/12 mb-4 sm:mb-0"
       >
         <img
           className="text-rich_black h-8 w-8"
@@ -83,7 +80,7 @@ const TabNav = ({ currentView }: NavProps) => {
           alt="Contact Icon"
         />
         <p
-          className={`text-rich_black font-serif font-bold text-center text-2xl`}
+          className={`text-rich_black font-serif font-bold text-center text-lg sm:text-2xl`}
         >
           Contact
         </p>

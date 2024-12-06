@@ -9,7 +9,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row justify-items-center justify-center h-full">
-        <div className="basis-5/6 bg-isabelline-700 rounded-t-3xl p-9 h-full">
+        <div className="basis-5/6 bg-isabelline-900 rounded-t-3xl shadow p-9 h-full">
           <p className="text-rich_black text-5xl font-serif mb-14">
             Hello My name is Salvador Alfaro
           </p>

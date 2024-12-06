@@ -1,17 +1,24 @@
 "use client";
 import TabNav from "../components/tabNav";
 import GetBooks from "../components/GetBooks";
-import NewBookSubmit from "../components/NewBookSubmit";
+import { useState } from "react";
+import FormModal from "../Tester/page";
+import AdminSubmitBook from "../components/AdminSubmitBook";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="flex flex-col bg-isabelline min-h-screen">
-      <div className="basis-1/12 bg-isabelline">
+      <div className="basis-1/12 bg-isabelline h-full">
         <TabNav currentView="books" />
       </div>
 
-      <div className="flex flex-row justify-items-center justify-center flex-grow">
-        <div className="basis-5/6 bg-isabelline-700 rounded-t-3xl p-9">
+      <div className="flex flex-row justify-items-center justify-center h-full">
+        <div className="basis-5/6 bg-isabelline-900 shadow rounded-t-3xl p-9 h-full">
           <p className="text-rich_black text-5xl font-serif mb-14">BOOKS</p>
           <p className="text-rich_black text-5xl font-serif mb-14">
             I have a poor memory so here I am creating a site to remember what
@@ -28,7 +35,13 @@ export default function Home() {
               to some degree.
             </p>
           </div>
-          <NewBookSubmit></NewBookSubmit>
+          <button
+            onClick={openModal}
+            className="px-6 py-2 bg-rich_black-700 text-isabelline-900 rounded-lg hover:bg-blue-600 mb-4"
+          >
+            Add a Book
+          </button>
+          <AdminSubmitBook isOpen={isModalOpen} closeModal={closeModal} />
           <GetBooks></GetBooks>
         </div>
       </div>
